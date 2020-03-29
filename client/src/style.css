@@ -1,5 +1,6 @@
 .jumbotron {
-    background-image: url(./components/Header/assets/library.jpg);
+    background-image: url(./components/Header/library.jpg);
+    background-size: cover;
 }
 
 nav {
