@@ -18,9 +18,15 @@ mongoose.connect(
     useUnifiedTopology: true
   },
   
+
   () =>
     console.log("connected to DB!")
   );
+
+  // Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 // Define API routes here
 app.use(routes)
 
