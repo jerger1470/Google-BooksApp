@@ -1,27 +1,37 @@
 const express = require("express");
 const routes = require("./routes");
 const mongoose = require("mongoose");
-
+const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 const app = express();
+require("dotenv/config");
 
 // Set up middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-//Connect to MongoDB Cloud Atlas or local mongoDB
-mongoose.connect(
-    process.env.MONGODB_URL || "mongodb://localhost/googlebooks",
-  {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-  },
-  
+const db = process.env.MONGODB_URL;
 
-  () =>
-    console.log("connected to DB!")
-  );
+const connectDB = async () => {
+  try {
+    await mongoose.connect(db, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true
+    });
+    console.log("MongoDB is Connected...");
+  } catch (err) {
+    console.error(err.message);
+    process.exit(1);
+  }
+};
+connectDB()
+
+// cors origin URL - Allow inbound traffic from origin
+corsOptions = {
+  origin: "Your FrontEnd Website URL",
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
 
   // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
