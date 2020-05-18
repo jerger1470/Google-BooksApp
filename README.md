@@ -2,6 +2,10 @@
 
 This is a full stack MERN project using MongoDB with React to search Google Books API for books and store them on a cloud DB.
 
+# Overview
+
+I created this App to give users the ability to search Google's book API to search and store books for a booklist to read or buy later.
+
 ## Installation
 
 RUN: NPM START
