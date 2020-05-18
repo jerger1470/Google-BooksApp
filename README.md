@@ -49,6 +49,8 @@ Github - https://github.com/jerger1470/Google-BooksApp
 ## Contributing
 
 Created by: Bryan Jerger
+Github: Jerger1470
+Dev Profile: http://bryanmjerger.net
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
