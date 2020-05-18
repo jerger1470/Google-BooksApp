@@ -6,7 +6,13 @@ This is a full stack MERN project using MongoDB with React to search Google Book
 
 I created this App to give users the ability to search Google's book API to search and store books for a booklist to read or buy later.
 
-## Installation
+## Features
+
+-Google API Search Engine
+-MongoDB Storage
+-Created using React JS Framework
+
+### Installation
 
 RUN: NPM START
 --starts the server and the react app concurrently.
@@ -30,7 +36,7 @@ Server
     "react-scripts": "3.4.0",
     "react-router-dom": "^5.0.1"
 
-## Usage
+### Usage
 
 ```Javascript/React/Node.JS
 
